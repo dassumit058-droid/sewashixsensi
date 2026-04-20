@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEWASHIxSENSI | Premium Free Fire Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://wallpaperaccess.com/full/1151161.jpg');
+            background-size: cover; background-position: center;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+            transition: 0.3s;
+        }
+        .glow-button:hover { box-shadow: 0 0 35px rgba(220, 38, 38, 0.8); transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-bold">S</div>
+            <span class="text-xl font-bold tracking-tighter text-red-500">SEWASHIxSENSI</span>
+        </div>
+        <div class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full border border-green-500/50">
+            <i class="fas fa-shield-alt mr-1"></i> 100% Safe & Secure
+        </div>
+    </nav>
+
+    <section class="hero-gradient min-h-[80vh] flex flex-col items-center justify-center text-center px-6 py-20">
+        <div class="inline-block bg-red-600/20 text-red-500 px-4 py-1 rounded-full text-sm font-semibold mb-6 border border-red-600/30">
+            <i class="fas fa-play-circle mr-2"></i> FREE FIRE PREMIUM SENSI
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            Upgrade Your Free Fire <br> Gameplay With <span class="text-red-600">SEWASHIxSENSI</span>
+        </h1>
+        <p class="text-gray-400 max-w-lg mb-10 text-lg">
+            Premium Free Fire sensi settings for Android & iOS. Device-based optimization for smooth drag & strong headshots.
+        </p>
+        
+        <button class="glow-button bg-red-600 text-white px-10 py-4 rounded-xl font-bold text-xl mb-6">
+            <i class="fas fa-bolt mr-2"></i> GET SENSI NOW
+        </button>
+
+        <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+            <i class="fab fa-instagram text-2xl text-pink-500"></i> FOLLOW US
+        </a>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 border-t border-white/10 bg-black">
+        <div class="text-center p-4">
+            <h3 class="text-2xl font-bold text-red-500">2,500+</h3>
+            <p class="text-gray-500 text-sm">Happy Customers</p>
+        </div>
+        <div class="text-center p-4">
+            <h3 class="text-2xl font-bold text-red-500">80K+</h3>
+            <p class="text-gray-500 text-sm">Followers</p>
+        </div>
+        <div class="text-center p-4">
+            <h3 class="text-2xl font-bold text-red-500">99%</h3>
+            <p class="text-gray-500 text-sm">Headshot Rate</p>
+        </div>
+        <div class="text-center p-4">
+            <h3 class="text-2xl font-bold text-red-500">Anti-Ban</h3>
+            <p class="text-gray-500 text-sm">Safe Script</p>
+        </div>
+    </section>
+
+    <div class="fixed bottom-0 w-full bg-black/90 border-t border-white/10 p-4 flex justify-around items-center md:hidden backdrop-blur-lg">
+        <div class="flex flex-col items-center text-red-500">
+            <i class="fas fa-home text-xl"></i>
+            <span class="text-[10px] mt-1">Home</span>
+        </div>
+        <div class="flex flex-col items-center text-gray-500">
+            <i class="fas fa-crosshairs text-xl"></i>
+            <span class="text-[10px] mt-1">Free Sensi</span>
+        </div>
+        <div class="flex flex-col items-center text-gray-500">
+            <i class="fas fa-shopping-bag text-xl"></i>
+            <span class="text-[10px] mt-1">Store</span>
+        </div>
+        <div class="flex flex-col items-center text-gray-500">
+            <i class="fas fa-chart-line text-xl"></i>
+            <span class="text-[10px] mt-1">Stats</span>
+        </div>
+    </div>
+
+    <div class="h-20"></div> </body>
+</html>
