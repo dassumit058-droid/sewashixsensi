@@ -13,80 +13,68 @@
         .plan-card:hover { border-color: #ff3131; transform: translateY(-5px); }
         .premium-border { border: 1px solid #ff3131; box-shadow: 0 0 20px rgba(255, 49, 49, 0.1); }
         .glow-text { text-shadow: 0 0 10px rgba(255, 49, 49, 0.5); }
-        
-        /* Modal Style for QR */
         #qrModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="p-4 md:p-10 flex flex-col items-center">
 
     <div class="text-center mb-10">
         <h1 class="text-4xl font-extrabold tracking-tighter glow-text uppercase">SEWASHI<span class="text-red-500">x</span>SENSI</h1>
-        <p class="text-gray-400 text-sm mt-2">Select your plan to dominate the battlefield</p>
+        <p class="text-gray-400 text-sm mt-2">Choose a plan to upgrade your Free Fire gameplay</p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
-        
+    <div class="grid grid-cols-1 gap-6 w-full max-w-md">
         <div class="plan-card p-6 rounded-2xl flex justify-between items-center">
             <div>
-                <h3 class="text-xl font-bold uppercase">Basic Plan</h3>
-                <p class="text-gray-500 text-xs mt-1">For Casual Players</p>
-                <div class="text-2xl font-bold mt-2 text-white">₹99</div>
+                <h3 class="text-xl font-bold uppercase">Basic</h3>
+                <p class="text-gray-500 text-xs mt-1">Standard Sensitivity</p>
+                <div class="text-2xl font-bold mt-2">₹99</div>
             </div>
-            <button onclick="openQR()" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-bold transition">Unlock</button>
+            <button onclick="openQR('99')" class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl font-bold transition">Unlock</button>
         </div>
 
         <div class="plan-card premium-border p-6 rounded-2xl flex justify-between items-center relative">
-            <div class="absolute top-0 right-0 bg-red-600 text-[10px] px-3 py-1 font-bold uppercase rounded-bl-lg">Most Popular</div>
+            <div class="absolute top-0 right-0 bg-red-600 text-[10px] px-3 py-1 font-bold uppercase rounded-bl-lg">Popular</div>
             <div>
-                <h3 class="text-xl font-bold uppercase text-red-500">Premium Plan</h3>
-                <p class="text-gray-400 text-xs mt-1">Auto-Headshot + Lag Fix</p>
+                <h3 class="text-xl font-bold uppercase text-red-500">Premium</h3>
+                <p class="text-gray-400 text-xs mt-1">Auto-Headshot Tuned</p>
                 <div class="text-2xl font-bold mt-2">₹199</div>
             </div>
-            <button onclick="openQR()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-red-600/20 transition">Unlock</button>
+            <button onclick="openQR('199')" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl font-bold shadow-lg shadow-red-600/20 transition">Unlock</button>
         </div>
 
         <div class="plan-card p-6 rounded-2xl flex justify-between items-center border-blue-900/50">
             <div>
-                <h3 class="text-xl font-bold uppercase text-blue-500">Esports Plan</h3>
-                <p class="text-gray-500 text-xs mt-1">Tournament Level Accuracy</p>
+                <h3 class="text-xl font-bold uppercase text-blue-500">Esports</h3>
+                <p class="text-gray-500 text-xs mt-1">Tournament Accuracy</p>
                 <div class="text-2xl font-bold mt-2">₹149</div>
             </div>
-            <button onclick="openQR()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition">Unlock</button>
+            <button onclick="openQR('149')" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl font-bold transition">Unlock</button>
         </div>
-
-    </div>
-
-    <div class="mt-12 text-center text-gray-500 text-xs space-y-2">
-        <p><i class="fas fa-shield-alt text-green-500 mr-2"></i> 100% Safe & Anti-Ban</p>
-        <p><i class="fas fa-bolt text-yellow-500 mr-2"></i> Instant Access After Payment</p>
     </div>
 
     <div id="qrModal">
         <div class="glass max-w-sm w-full p-8 text-center relative">
             <button onclick="closeQR()" class="absolute top-4 right-4 text-gray-500 hover:text-white text-xl">&times;</button>
-            <h2 class="text-xl font-bold mb-4">Scan to Pay</h2>
-            <p class="text-gray-400 text-xs mb-6">Pay the plan amount and send screenshot to WhatsApp</p>
+            <h2 class="text-xl font-bold mb-4 uppercase">Scan & Pay</h2>
+            <p class="text-gray-400 text-xs mb-6">Pay and send screenshot to WhatsApp</p>
             
-            <img src="qr.png" alt="UPI QR Code" class="w-full rounded-xl border-4 border-white mb-6">
+            <img src="qr.png.jpg" alt="Payment QR" class="w-full rounded-xl border-4 border-white mb-6">
             
-            <p class="text-red-500 font-bold text-sm">Amount: Enter Plan Price</p>
-            <a href="https://wa.me/91XXXXXXXXXX" class="block mt-6 text-xs text-blue-400 underline italic">Already paid? Click here to send screenshot</a>
+            <p id="amountText" class="text-red-500 font-bold text-lg mb-4"></p>
+            <a href="https://wa.me/916291622842" class="block bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-sm transition">
+                <i class="fab fa-whatsapp mr-2"></i> Send Screenshot
+            </a>
         </div>
     </div>
 
     <script>
-        function openQR() {
+        function openQR(price) {
+            document.getElementById('amountText').innerText = "Amount: ₹" + price;
             document.getElementById('qrModal').style.display = 'flex';
         }
         function closeQR() {
             document.getElementById('qrModal').style.display = 'none';
-        }
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('qrModal')) {
-                closeQR();
-            }
         }
     </script>
 
